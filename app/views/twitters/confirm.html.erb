@@ -1,0 +1,7 @@
+<%= form_with(model: @twitter, url: twitters_path, local: true) do |form| %>
+    <h3>以下の内容でツイートする。</h3>
+    <%= form.hidden_field :content %>
+    <p>つぶやき:<%= @twitter.content %></p>
+    <%= form.submit  "ツイートする" %>
+    <%= form.submit "戻る", name: 'back' %>
+<% end %>
